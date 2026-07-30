@@ -80,12 +80,12 @@ class _TileLayerState extends State<TileLayer> {
         final oy = (j * tileSizeScaled) + centerY - ttl.y;
 
         final child = Positioned(
+          key: ValueKey('$fixedZoom/$i/$j'),
           width: tileSizeScaled.ceilToDouble(),
           height: tileSizeScaled.ceilToDouble(),
           left: ox.floorToDouble(),
           top: oy.floorToDouble(),
-          child: widget.builder
-              .call(context, i, j, (_controller.zoom + 0.0000001).floor()),
+          child: widget.builder.call(context, i, j, fixedZoom),
         );
 
         children.add(child);

@@ -1,3 +1,7 @@
+## [2.0.3]
+
+* Preserve tile widget state during map movement to prevent flickering with asynchronously loaded tiles.
+
 ## [2.0.2]
 
 * Shape layers are more customizable now.
