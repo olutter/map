@@ -62,7 +62,7 @@ class _TileLayerState extends State<TileLayer> {
     final centerTileIndexX = (norm.x * fixedPowZoom).floor();
     final centerTileIndexY = (norm.y * fixedPowZoom).floor();
 
-    final scaleValue = pow(2.0, (_controller.zoom % 1));
+    final scaleValue = scale / fixedPowZoom;
     final tileSizeScaled = _tileSize * scaleValue;
 
     final numTilesX = (screenWidth / _tileSize / 2.0).ceil();
